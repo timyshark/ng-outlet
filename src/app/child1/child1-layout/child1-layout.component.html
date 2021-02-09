@@ -1,0 +1,10 @@
+<h2>Child1 Primary Router outlet</h2>
+<router-outlet></router-outlet>
+<h2>Child1 Router Outlet 1,2</h2>
+<a [routerLink]="['/',{ outlets: { outlet1: ['oc1'] } }]">Outlet 1</a><br/>
+<a [routerLink]="['/child1',{ outlets: { outlet2: ['child1-oc2'] } }]">Outlet 2</a><br/>
+<h3>Child 1 Outlet 1</h3>
+<router-outlet name="outlet1"></router-outlet>
+<h3>Child 1 Outlet 2</h3>
+<router-outlet name="outlet2"></router-outlet>
+<p>--------------------------------End----------Child 1 Layout----------------------</p>
