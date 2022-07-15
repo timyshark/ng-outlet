@@ -1,11 +1,25 @@
 <h1>App Component</h1>
 <p>---primary----</p>
 <router-outlet></router-outlet>
-<p>----end primary-App Componenet-----</p>
-<p>----outlets 1,2 start---App Componenet----------</p>
+<p>----end primary-App Component-----</p>
+<p>----outlets 1,2 start---App Component----------</p>
 <a [routerLink]="[{ outlets: { outlet1: ['oc1'], outlet2: ['oc2'] } }]">Outlets</a>
-<h3>App Outlet 1</h3>
+<table border="2">
+    <tr>
+        <th>Section</th>
+        <th>Outlet</th>
+    </tr>
+    <tr>
+        <td>App Outlet 1</td>
+        <td><router-outlet name="outlet1"></router-outlet></td>
+    </tr>
+    <tr>
+        <td>App Outlet 2</td>
+        <td><router-outlet name="outlet2"></router-outlet></td>
+    </tr>
+</table>
+<!-- <h3>App Outlet 1</h3>
 <router-outlet name="outlet1"></router-outlet>
 <h3>App Outlet 2</h3>
-<router-outlet name="outlet2"></router-outlet>
-<p>------------End---App Componenet-----------------------------</p>
+<router-outlet name="outlet2"></router-outlet> -->
+<p>------------End---App Component-----------------------------</p>

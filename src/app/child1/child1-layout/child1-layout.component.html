@@ -3,8 +3,28 @@
 <h2>Child1 Router Outlet 1,2</h2>
 <a [routerLink]="['/',{ outlets: { outlet1: ['oc1'] } }]">Outlet 1</a><br/>
 <a [routerLink]="['/child1',{ outlets: { outlet2: ['child1-oc2'] } }]">Outlet 2</a><br/>
-<h3>Child 1 Outlet 1</h3>
+<!--
+    This table formating is meaningless, the outlet will cascade all the way to the root origin position
+-->
+<table border="2">
+    <tr>
+        <th>Child 1 Section</th>
+        <th>Outlet</th>
+    </tr>
+    <tr>
+        <td>Child 1 Outlet 1</td>
+        <td><router-outlet name="outlet1"></router-outlet></td>
+    </tr>
+    <tr>
+        <td>Child 1 Outlet 2</td>
+        <td><router-outlet name="outlet2"></router-outlet></td>
+    </tr>
+</table>
+<!--
+    No matter what formatting used, the router outlet goes all the way to the originator root format
+-->
+<!-- <h3>Child 1 Outlet 1</h3>
 <router-outlet name="outlet1"></router-outlet>
 <h3>Child 1 Outlet 2</h3>
-<router-outlet name="outlet2"></router-outlet>
+<router-outlet name="outlet2"></router-outlet> -->
 <p>--------------------------------End----------Child 1 Layout----------------------</p>

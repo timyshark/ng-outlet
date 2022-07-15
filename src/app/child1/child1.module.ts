@@ -9,20 +9,9 @@ import { Child1OC1Component } from './child1-oc1/child1-oc1.component';
 import { Child1OC2Component } from './child1-oc2/child1-oc2.component';
 
 const child1Routes: Routes = [
-  {
-    path: 'child1-oc1',
-    component: Child1OC1Component,
-    outlet: 'outlet1'
-  },
-  {
-    path: 'child1-oc2',
-    component: Child1OC1Component,
-    outlet: 'outlet2'
-  },
-  {
-    path: '',
-    component: Child1LayoutComponent,
-    children: [
+  { path: 'child1-oc1',  component: Child1OC1Component,  outlet: 'outlet1'  },
+  { path: 'child1-oc2',  component: Child1OC1Component,   outlet: 'outlet2'  },
+  { path: '',  component: Child1LayoutComponent, children: [
       {
         path: '',
         children: [
